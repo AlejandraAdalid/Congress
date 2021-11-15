@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Vue</title>
+    
+    </head>
+    
+        
+    <body>
+​
+ 
+
+
+        <div id="app">
+​
+            <label>M1
+                <input v-model="mesas" type="checkbox" value="mesa1" name="mesas">
+            </label>
+            <label>M2
+                <input v-model="mesas" type="checkbox" value="mesa2" name="mesas">
+            </label>
+            <label>M3
+                <input v-model="mesas" type="checkbox" value="mesa3" name="mesas">
+            </label>
+​
+            <ul>
+                <li v-for="(value, key) in alumnos" v-show="mostrar(key)">
+                    {{key}}
+                    <ul>
+                        <li v-for="(item, index) in value">
+                            {{index + 1}}: {{mayus(item)}};
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+           
+            
+        </div>
+​
+ 
+    
+    	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    	<script>
+            let mesa1 = ["Marcela", "Nathalie", "Claudio", "Alejandra", "Lilia", "Georgina", "Silvana", "Victor"]
+            let mesa2 = ["Liza", "Santiago", "Matías", "Nicolás", "Pablo", "Tomás", "Roberto", "Jesús", "Eduardo"]
+            let mesa3 = ["Valentín", "Alcides", "Griselda", "Leonardo", "Aylén", "Nicolás", "Florencia", "Amanda", "Marco"]
+            const vue = new Vue({
+                el: '#app',
+                data: {
+                    quesos: ['parmesano','roquefort','gouda','sardo','pategras','cheddar'],
+                    string: 'Hola',
+                    alumnos:{
+                        mesa1: mesa1,
+                        mesa2: mesa2,
+                        mesa3: mesa3
+                    },
+                    mesas: ["mesa1", "mesa2", "mesa3"]
+                },
+                methods: {
+                    mayus(str){
+                        return str.toUpperCase()
+                    },
+                    mostrar(key){
+                        return this.mesas.includes(key)
+                    }
+                }
+            })​
+        </script>
+</body>
+</html>

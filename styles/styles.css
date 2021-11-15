@@ -1,0 +1,40 @@
+
+body {
+    size: 100%;
+    border: 1px solid rgb(7, 7, 7);
+    padding: 2%;
+}
+
+.state{
+    text-align: right;
+}
+/*---------------------------------*/
+.textInfo{
+    font-size:80%;
+}
+img{ 
+    width: 150px;
+    
+}
+div.mail{
+    text-align: right;
+    margin-top: -2%;
+}
+div.state{
+    text-align: right;
+    margin-top: -4%;
+}
+div.imagen{
+    text-align: right;
+    margin-top: 10%; 
+}
+
+footer{
+    position: fixed;
+    bottom:0;
+    background-color: dimgray;
+    width: 98%;
+    font-size: 14px;  
+    text-align: center;
+    
+}
